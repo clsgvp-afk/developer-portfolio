@@ -1,0 +1,32 @@
+{
+  "model": "qwen2.5-coder:3b",
+  "endpoint": "http://127.0.0.1:11434",
+  "context_size": 4096,
+  "temperature": 0.2,
+  "keep_alive": "2m",
+  "max_iterations": 24,
+  "max_complex_iterations": 60,
+  "iterations_per_step": 10,
+  "max_plan_steps": 24,
+  "max_consecutive_rejections": 8,
+  "max_retries": 3,
+  "task_timeout_seconds": 1800,
+  "command_timeout_seconds": 45,
+  "inference_timeout_seconds": 180,
+  "max_output_bytes": 12000,
+  "max_file_bytes": 100000,
+  "context_chars": 9500,
+  "session_timeout_seconds": 14400,
+  "local_repair_attempts": 2,
+  "stall_iterations": 3,
+  "max_stalled_iterations": 12,
+  "cloud": {
+    "enabled": false,
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "daily_budget_usd": 5.00,
+    "max_calls_per_task": 2,
+    "max_output_tokens": 1024,
+    "timeout_seconds": 90
+  }
+}
