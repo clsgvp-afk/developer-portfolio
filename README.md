@@ -4,6 +4,7 @@ Selected software and web projects from my personal work, developed with AI assi
 
 | Project | What it shows |
 | --- | --- |
+| [Lagerverwaltung](projects/lagerverwaltung) · [Case study](https://clsgvp-afk.github.io/projekte/lagerverwaltung/) | Windows inventory application with a C# / WPF client, PHP REST API and PostgreSQL. Includes an integration test for concurrent stock movements and retries. |
 | [Invoice and payment reconciliation](https://github.com/clsgvp-afk/clsgvp-afk.github.io/tree/main/projekte/zahlungsabgleich) · [Interactive demo](https://clsgvp-afk.github.io/projekte/zahlungsabgleich/) | A Python CLI and browser app share SQLite matching rules. Import two CSVs, inspect ambiguous payments and export an explained report. |
 | [Local AI Engineer](projects/local-ai-engineer) | Python CLI using Ollama, task state in SQLite, resumable workflows and test execution. |
 | [Resource pack optimizer](projects/resource-pack-optimizer) | Java utility for deduplicating resources and rewriting model references inside Minecraft ZIP packs. |

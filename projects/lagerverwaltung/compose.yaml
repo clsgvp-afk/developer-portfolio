@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: lager
+      POSTGRES_USER: lager
+      POSTGRES_PASSWORD: lager-local-demo
+    volumes:
+      - lager_data:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lager -d lager -h 127.0.0.1"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+  api:
+    build: api
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_DSN: "pgsql:host=db;dbname=lager"
+      DB_USER: lager
+      DB_PASSWORD: lager-local-demo
+      PHP_CLI_SERVER_WORKERS: "4"
+    ports:
+      - "127.0.0.1:8077:8077"
+volumes:
+  lager_data:
